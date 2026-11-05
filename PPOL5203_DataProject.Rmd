@@ -1,0 +1,30 @@
+---
+title: "PPOL 5203 Data Project"
+author: "Ellis Langham"
+date: "2026-11-05"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Loading Data
+
+```{r cars}
+library(haven) #for reading dta
+pres_df <- read_dta("data/presidential_elections_v2.dta")
+vdem_df <- readRDS("data/V_Dem_CY_Full_Others_v16.rds")
+cpi_df <- read_dta("data/inflation-data/ccpi_a.dta")
+
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
